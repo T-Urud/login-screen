@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Kanit";
+  src: url(./font/Kanit-Regular.ttf);
+}
+
+:root{
+  --google-btn: #E6E6E6;
+  --white: #FFFFFF;
+  --black: #000000;
+  --btn: #A221FA;
+  --txt-hover: #AC2BD3;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(90deg, rgba(231,0,255,1) 0%, rgba(153,0,255,1) 100%);
+}
