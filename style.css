@@ -66,11 +66,18 @@ form{
   row-gap: 0.5rem;
   width: 100%;
 }
+form div:first-child{
+  text-align: left;
+  width: 100%;
+  font-size: 0.8rem;
+  line-height: 0;
+  margin-top: 2.5rem;
+}
 input{
-  border: none;
+  /* border: none; */
+  /* outline: none; */
 }
 .email-container{
-  margin-top: 2.5rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -109,10 +116,6 @@ button svg{
 #google-btn{
   background-color: var(--google-btn);
   color: var(--black);
-}
-button:hover{
-  transform: scale(1.05);
-  transition: 0.2s ease-in-out;
 }
 
 span{
