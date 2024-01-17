@@ -66,30 +66,47 @@ form{
   row-gap: 0.5rem;
   width: 100%;
 }
-form div:first-child{
-  text-align: left;
-  width: 100%;
-  font-size: 0.8rem;
-  line-height: 0;
-  margin-top: 2.5rem;
-}
 input{
-  /* border: none; */
-  /* outline: none; */
-}
-.email-container{
+  border: none;
+  outline: none;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
+.email-container,
 .password-container{
-  margin-bottom: 2.5rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  border-bottom: 2px solid var(--black);
+}
 
+.password-container{
+  margin: 0.7rem 0 2.5rem 0;
+}
+.email-container svg,
+.password-container svg{
+  padding-bottom: 2px;
+}
+.input-label{
+  position: absolute;
+  color: var(--black);
+  font-size: 0.8rem;
+  user-select: none;
+}
+#email:focus ~.input-label,
+#password:focus ~.input-label{
+  top: -1rem;
+  position: absolute;
+  color: var(--txt-hover);
+  display: block;
+}
+#email:focus~svg,
+#password:focus~svg{
+  fill: var(--txt-hover);
+}
+#email:focus~.email-container{
+  border-bottom-color: var(--txt-hover);
 }
 
 button{
@@ -130,3 +147,26 @@ span a{
   text-decoration: none;
   color: var(--black);
 }
+a:hover{
+  text-decoration: underline;
+}
+
+/* JS */
+
+/* .clicked{
+  fill: var(--txt-hover);
+  color: var(--txt-hover);
+}
+ */
+/* .email-container::after .clicked,
+.password-container::after .clicked{
+  background-color: var(--txt-hover);
+}
+
+.email-container svg .clicked,
+.password-container svg .clicked{
+  fill: var(--txt-hover);
+}
+#email-txt .clicked{
+  color: var(--txt-hover);
+} */
